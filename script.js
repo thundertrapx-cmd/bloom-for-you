@@ -11,18 +11,15 @@ const CONFIG = {
 
   // Letter text (supports \n for new lines)
   letterText:
-`Two years with you have been the happiest chapter of my life.
+`Two years with you have been the greatest chapter of my life.
 
-Every morning I wake up grateful that I get to call you mine.
-You've been my safe place, my adventure partner, my best friend.
+Sometimes we fight, but we always fix things and stick together.
+Sometimes we're tired, but we still fulfill each other.
 
-I love the way you laugh, the way you care, the way you make
-the ordinary feel like magic just by being there.
+No matter what happens in our lives, we’ll stick together till the end. 
+Just know that I’ll always choose you, every single time.
 
-Here's to every year that follows — I choose you every single time.
-
-Happy 2nd Anniversary, my love.`,
-
+Happy 2nd Anniversary, my dear. ❤️`,
   letterSign: "— Forever yours 💕",
 
   // Gallery moments
