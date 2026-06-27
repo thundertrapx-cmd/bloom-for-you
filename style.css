@@ -359,10 +359,11 @@ body {
 }
 .gallery-card:hover { transform: scale(1.06) rotate(1deg); box-shadow: 0 12px 32px rgba(200,100,150,.25); }
 .gallery-card .card-emoji {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: clamp(50px,10vw,80px);
-  background: linear-gradient(135deg, #ffe0ec, #f5e0ff);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ช่วยให้รูปภาพตัดพอดีกล่อง ไม่บีบแบน */
+  border-radius: 12px; /* เพิ่มความโค้งมนให้ขอบรูปดูละมุนขึ้น */
+  display: block;
 }
 .gallery-card .card-label {
   position: absolute; bottom: 0; left: 0; right: 0;
