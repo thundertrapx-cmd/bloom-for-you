@@ -24,12 +24,12 @@ Happy 2nd Anniversary, my dear. ❤️`,
 
   // Gallery moments
   gallery: [
-    { emoji: "🌅", label: "Our First Date", caption: "The day everything changed. I was nervous, you were perfect." },
-    { emoji: "🎂", label: "1st Anniversary", caption: "365 days of choosing each other. Worth every single one." },
-    { emoji: "🌊", label: "Beach Trip", caption: "Sand between our toes and nowhere else we'd rather be." },
-    { emoji: "🍜", label: "Late Night Ramen", caption: "2AM and we were still talking like time had stopped." },
-    { emoji: "⭐", label: "Stargazing Night", caption: "You pointed at a star and said 'that one's ours now'." },
-    { emoji: "🎌", label: "Our Spot", caption: "Every time I pass by, I think of you." },
+    { img: "moment1.jpg", label: "Our First Date", caption: "The first normal night that we go to 7-eleven together." },
+    { img: "moment2.jpg", label: "Beach Trip", caption: "The night that we want to go to the beach." },
+    { img: "moment3.jpg", label: "My Fav Picture", caption: "You so Beautiful." },
+    { img: "moment4.jpg", label: "New Year Night", caption: "That night we got a lot of fun and electic run out hahaha." },
+    { img: "moment5.jpg", label: "Our Kids", caption: "Our doll that we love." },
+    { img: "moment6.jpg", label: "Memories", caption: "My favorite wallpaper." },
   ],
 
   // Garden flowers with messages
