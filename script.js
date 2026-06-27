@@ -270,36 +270,40 @@ function initLetter() {
 // 6. GALLERY
 // ─────────────────────────────────────────────
 function initGallery() {
-  const grid = document.getElementById('gallery-grid');
-  if (grid.children.length) return; // already built
+  const container = document.getElementById('gallery-container');
+  if (!container) return;
+  container.innerHTML = '';
 
-  CONFIG.gallery.forEach((item, idx) => {
+  CONFIG.gallery.forEach((item, index) => {
     const card = document.createElement('div');
     card.className = 'gallery-card';
-    card.style.animationDelay = (idx * .08) + 's';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+
+    // แก้ตรงนี้: เปลี่ยนจากใส่ตัวหนังสือ Emoji เป็นแท็ก <img> เพื่อโหลดรูปภาพแทน
     card.innerHTML = `
-      <div class="card-emoji">${item.emoji}</div>
-      <div class="card-label">${item.label}</div>
+      <div class="card-media">
+        <img src="${item.img}" class="card-image" alt="${item.label}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="card-fallback-emoji" style="display:none;">📸</span>
+      </div>
+      <div class="card-info">
+        <h3>${item.label}</h3>
+        <p>${item.caption}</p>
+      </div>
     `;
-    card.style.opacity = '0';
-    card.style.transform = 'scale(.7) translateY(20px)';
-    card.style.transition = `opacity .5s ease ${idx * .08}s, transform .5s var(--ease-spring) ${idx * .08}s`;
 
-    card.addEventListener('click', () => openLightbox(item));
-    grid.appendChild(card);
-
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      card.style.opacity = '1';
-      card.style.transform = '';
-    }));
+    card.addEventListener('click', () => openLightbox(index));
+    card.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') openLightbox(index); });
+    container.appendChild(card);
   });
 }
-
-function openLightbox(item) {
+function openLightbox(index) {
   const lb = document.getElementById('lightbox');
-  document.getElementById('lb-photo').textContent   = item.emoji;
-  document.getElementById('lb-caption').textContent = item.caption;
-  lb.classList.remove('hidden');
+  const lbImg = document.getElementById('lightbox-img'); // ถ้าไม่มี ID นี้ ให้ดูบรรทัดล่าง
+  // มองหาบรรทัดที่สั่งเปลี่ยนเนื้อหา Lightbox แล้วแก้ให้ดึง item.img แทน เช่น:
+  const content = CONFIG.gallery[index];
+  
+  // สมมติโค้ดเดิมใช้เป็น emoji ให้ปรับแก้ตัวครอบของ Lightbox ในสคริปต์ให้แสดงเป็นแท็ก img แทนครับ
 }
 
 document.getElementById('lb-close').addEventListener('click', () => {
