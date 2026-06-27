@@ -29,7 +29,7 @@ Happy 2nd Anniversary, my dear. ❤️`,
     { img: "moment3.jpg", label: "My Fav Picture", caption: "You so Beautiful." },
     { img: "moment4.jpg", label: "New Year Night", caption: "That night we got a lot of fun and electic run out hahaha." },
     { img: "moment5.jpg", label: "Our Kids", caption: "Our doll that we love." },
-    { img: "moment6.jpg", label: "Memories", caption: "My favorite wallpaper." },
+    { img: "moment6.PNG", label: "Memories", caption: "My favorite wallpaper." },
   ],
 
   // Garden flowers with messages
