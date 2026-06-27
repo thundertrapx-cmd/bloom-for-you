@@ -708,3 +708,18 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+.card-media {
+  width: 100%;
+  height: 200px; /* ปรับความสูงตามต้องการ */
+  overflow: hidden;
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* บังคับให้รูปตัดพอดีกล่อง ไม่บีบแบน */
+  display: block;
+}
